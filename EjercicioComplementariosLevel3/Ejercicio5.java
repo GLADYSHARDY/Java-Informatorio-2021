@@ -21,14 +21,12 @@ public class Ejercicio5 {
                 new Alumnos("Carl", "Shawerson", LocalDate.of(1998,10, 12)),
                 new Alumnos("Susan", "Marrit", LocalDate.of(2000, 8, 30)),
                 new Alumnos("Dimons", "Oswald", LocalDate.of(1999, 3, 12))); 
-                
-     Map<String, Integer> alumnosEdad = alumnos.stream()
+        Map<String, Integer> alumnosEdad = alumnos.stream()
                 .collect(Collectors
                         .toMap(al-> (al.getName() + " " + al.getSurname()),
                                 al -> Ejercicio5.getEdad(al.getBirthday())));
         System.out.println(alumnosEdad);
     }
-
     public static Integer getEdad(LocalDate birthDate){
         return Period.between(birthDate, LocalDate.now()).getYears();            
     }
