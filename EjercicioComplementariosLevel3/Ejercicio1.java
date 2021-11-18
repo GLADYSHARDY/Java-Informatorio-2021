@@ -6,7 +6,6 @@ List<String> palabras = new ArrayList<>();
         palabras.add(null);
         palabras.add("Informatorio");
         palabras.add("");
-
 Output (Salida):
 ["Hola", "Informatorio"]*/
 import java.util.ArrayList;
